@@ -1,6 +1,7 @@
 ## Interface: 11200
 ## Title: Compare Stats
 ## Notes: Determine the overall stat changes a piece of equipment will have before equiping it.
+## Notes-ruRU: Сравнивает надетые на вас предметы с другими, удобно выводя информацию об получаемых параметрах или теряемых.
 ## Author: Dialos (Earthen Ring)
 ## Version: 1.1
 ## Dependencies: BonusScanner

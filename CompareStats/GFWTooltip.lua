@@ -517,7 +517,7 @@ if (G.Version == nil or (tonumber(G.Version) and G.Version < GFWTOOLTIP_THIS_VER
 	-- Set version number
 	G.Version = GFWTOOLTIP_THIS_VERSION;
 
-	GFWUtils.Print("GFWTooltip v"..GFWTOOLTIP_THIS_VERSION.." loaded.");
+	GFWUtils.Print(GFWTOOLTIP_LOAD_MESSAGE..GFWTOOLTIP_THIS_VERSION..GFWTOOLTIP_LOAD_MESSAGE_TWO);
 
 end
 

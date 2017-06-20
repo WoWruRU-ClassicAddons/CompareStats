@@ -185,7 +185,7 @@ function CompareStats_Display(frame)
 	--CompareStats_Tooltip:ClearLines();
 	--CompareStats_Tooltip:SetOwner(GameTooltip, "ANCHOR_PRESERVE");
 	
-	frame:AddLine("Equipping this will change: " .. CSCompare, 0, 1, 1, 1);
+	frame:AddLine(COMPARESTATS_EQUIP_CHANGE .. CSCompare, 0, 1, 1, 1);
 	
 	local bonus, i; 
 	for i, bonus in BonusScanner.types do
@@ -200,47 +200,47 @@ function CompareStats_Display(frame)
 	
 	if(CompareStats_Calc.health ~= nil) then
 		if(CompareStats_Calc.health > 0) then
-			frame:AddLine("Hit Points: " .. CompareStats_Calc.health, 1, 1, 0);
+			frame:AddLine(COMPARESTATS_HITPOINTS .. CompareStats_Calc.health, 1, 1, 0);
 		elseif(CompareStats_Calc.health < 0) then
-			frame:AddLine("Hit Points: " .. CompareStats_Calc.health, 1, 0.25, 0);
+			frame:AddLine(COMPARESTATS_HITPOINTS .. CompareStats_Calc.health, 1, 0.25, 0);
 		end
 	end
 	
 	if(CompareStats_Calc.mana ~= nil) then
 		if(CompareStats_Calc.mana > 0) then
-			frame:AddLine("Mana: " .. CompareStats_Calc.mana, 1, 1, 0);
+			frame:AddLine(COMPARESTATS_MANA .. CompareStats_Calc.mana, 1, 1, 0);
 		elseif(CompareStats_Calc.mana < 0) then
-			frame:AddLine("Mana: " .. CompareStats_Calc.mana, 1, 0.25, 0);
+			frame:AddLine(COMPARESTATS_MANA .. CompareStats_Calc.mana, 1, 0.25, 0);
 		end
 	end
 	
 	if(CompareStats_Calc.AP ~= nil) then
 		if(CompareStats_Calc.AP > 0) then
-			frame:AddLine("AP: " .. CompareStats_Calc.AP .. " dps: " .. CompareStats_Calc.dps, 1, 1, 0);
+			frame:AddLine(COMPARESTATS_AP .. CompareStats_Calc.AP .. COMPARESTATS_DPS .. CompareStats_Calc.dps, 1, 1, 0);
 		elseif(CompareStats_Calc.AP < 0) then
-			frame:AddLine("AP: " .. CompareStats_Calc.AP .. " dps: " .. CompareStats_Calc.dps, 1, 0.25, 0);
+			frame:AddLine(COMPARESTATS_AP .. CompareStats_Calc.AP .. COMPARESTATS_DPS .. CompareStats_Calc.dps, 1, 0.25, 0);
 		end
 	end
 	
 	if(CompareStats_Calc.dbearap ~= nil and CompareStats_Calc.dcatap ~= nil) then
 		if(CompareStats_Calc.dbearap > 0) then
-			frame:AddLine("Bear AP: " .. CompareStats_Calc.dbearap .. " Bear dps: " .. CompareStats_Calc.dbeardps, 1, 1, 0);
+			frame:AddLine(COMPARESTATS_BEAR_AP .. CompareStats_Calc.dbearap .. COMPARESTATS_BEAR_DPS .. CompareStats_Calc.dbeardps, 1, 1, 0);
 		elseif(CompareStats_Calc.dbearap < 0) then
-			frame:AddLine("Bear AP: " .. CompareStats_Calc.dbearap .. " Bear dps: " .. CompareStats_Calc.dbeardps, 1, 0.25, 0);
+			frame:AddLine(COMPARESTATS_BEAR_AP .. CompareStats_Calc.dbearap .. COMPARESTATS_BEAR_DPS .. CompareStats_Calc.dbeardps, 1, 0.25, 0);
 		end
 		
 		if(CompareStats_Calc.dcatap > 0) then
-			frame:AddLine("Cat AP: " .. CompareStats_Calc.dcatap .. " Cat dps: " .. CompareStats_Calc.dcatdps, 1, 1, 0);
+			frame:AddLine(COMPARESTATS_CAT_AP .. CompareStats_Calc.dcatap .. COMPARESTATS_CAT_DPS .. CompareStats_Calc.dcatdps, 1, 1, 0);
 		elseif(CompareStats_Calc.dcatap < 0) then
-			frame:AddLine("Cat AP: " .. CompareStats_Calc.dcatap .. " Cat dps: " .. CompareStats_Calc.dcatdps, 1, 0.25, 0);
+			frame:AddLine(COMPARESTATS_CAT_AP .. CompareStats_Calc.dcatap .. COMPARESTATS_CAT_DPS .. CompareStats_Calc.dcatdps, 1, 0.25, 0);
 		end
 	end
 	
 	if(CompareStats_Calc.RAP ~= nil) then
 		if(CompareStats_Calc.RAP > 0) then
-			frame:AddLine("RAP: " .. CompareStats_Calc.RAP .. " dps: " .. CompareStats_Calc.Rdps, 1, 1, 0);
+			frame:AddLine(COMPARESTATS_RAP .. CompareStats_Calc.RAP .. COMPARESTATS_DPS .. CompareStats_Calc.Rdps, 1, 1, 0);
 		elseif(CompareStats_Calc.RAP < 0) then
-			frame:AddLine("RAP: " .. CompareStats_Calc.RAP .. " dps: " .. CompareStats_Calc.Rdps, 1, 0.25, 0);
+			frame:AddLine(COMPARESTATS_RAP .. CompareStats_Calc.RAP .. COMPARESTATS_DPS .. CompareStats_Calc.Rdps, 1, 0.25, 0);
 		end
 	end
 	
